@@ -73,8 +73,8 @@ function update() {
   history.replaceState(null, document.title, baseurl + search);
 
   // Update link
-  const permalink = `https://kkn.snack.studio/map.html?d=${keikenData}`;
-  const imageBase = `https://kkni.snack.studio/image/${keikenData}.`;
+  const permalink = `file:///Users/mario/Downloads/keikenchi-master/map.html?d=${keikenData}`;
+  const imageBase = `file:///Users/mario/Downloads/keikenchi-master/image/${keikenData}.`;
   $(".links .permalink").val(permalink);
   $(".links .image-svg").val(imageBase + "svg");
   $(".links .image-jpg").val(imageBase + "jpg");
@@ -95,9 +95,9 @@ $(function() {
   // Check initial state
   let initial = [];
   const search = location.search;
-  const match = search.match(/[?&]d=([0-5]{47})(?:$|&)/);
+  const match = search.match(/[?&]d=([0-5]{243})(?:$|&)/);
   if(match) initial = match[1].split("").map(c => parseInt(c));
-  else initial = new Array(47).fill(0);
+  else initial = new Array(243).fill(0);
 
   // Make DOM and set to initial state
   const perColumn = Math.ceil(nPrefs / 3);
