@@ -73,8 +73,8 @@ function update() {
   history.replaceState(null, document.title, baseurl + search);
 
   // Update link
-  const permalink = `file:///Users/mario/Downloads/keikenchi-master/map.html?d=${keikenData}`;
-  const imageBase = `file:///Users/mario/Downloads/keikenchi-master/image/${keikenData}.`;
+  const permalink = `https://mario-kang2.github.io/keikenchi-kor-admin/map.html?d=${keikenData}`;
+  const imageBase = `https://mario-kang2.github.io/keikenchi-kor-admin/image/${keikenData}.`;
   $(".links .permalink").val(permalink);
   $(".links .image-svg").val(imageBase + "svg");
   $(".links .image-jpg").val(imageBase + "jpg");
